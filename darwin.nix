@@ -57,6 +57,7 @@
     # Cisco Anyconnect
     brews = [
         "snyk-cli"
+        "pandoc"
     ];
 
     casks = [
@@ -108,6 +109,7 @@
       "/Applications/Rambox.app"
       "/Applications/Arc.app"
       "/Applications/Obsidian.app"
+      "/Users/drackthor/Applications/Home Manager Apps/Zotero.app"
       "/Users/drackthor/Applications/PyCharm Professional Edition.app"
       "/Applications/Google Chrome.app"
     ];

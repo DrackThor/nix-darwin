@@ -46,6 +46,7 @@
     wget
     yq-go
     zoom-us
+    zotero
     zsh-autosuggestions
     zsh-fzf-tab
     zsh-powerlevel10k

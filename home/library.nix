@@ -104,6 +104,15 @@
 
       ssh-add --apple-use-keychain ~/.ssh/id_rsa ~/.ssh/id_ecdsa
       # add private keys to ssh agent
+
+      mani exec --all 'git pull'
+      # use mani to 'git pull' in all repos of config
+
+      mani sync --parallel
+      # sync all repos in config
+
+      mani exec --tags docs 'git status'
+      # run 'git status' at all "docs" repos
     '';
   };
 }

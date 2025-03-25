@@ -71,7 +71,23 @@
     # if zsh startup time is slow, try this to debug
     # zprof.enable = true;
     initExtra = ''
+      # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
+
+      # remove hosts from known_hosts
+      rmsshknownhost() {
+      if [ -z "$1" ]; then
+        echo "no paramter. exit"
+        return 1
+      else
+        grep $1 ~/.ssh/known_hosts
+        echo "---"
+        echo "removing $1 from ~/.ssh/known_hosts"
+        sed -i.bak "/$1/d" ~/.ssh/known_hosts
+      fi
+      }
+
+      # preview cmd library with "option" + "l"
       function cmdlib() {
         local selected_command
         selected_command=$(cat ~/.library | perl -0 -pe 's/\n+(?!#)/\n\0/g' | bat --plain --language bash --color always |  fzf --read0 --ansi --highlight-line --multi --height=20 --border --prompt="Command: ")
