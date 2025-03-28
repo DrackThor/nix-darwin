@@ -74,19 +74,6 @@
       # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
 
-      # remove hosts from known_hosts
-      rmsshknownhost() {
-      if [ -z "$1" ]; then
-        echo "no paramter. exit"
-        return 1
-      else
-        grep $1 ~/.ssh/known_hosts
-        echo "---"
-        echo "removing $1 from ~/.ssh/known_hosts"
-        sed -i.bak "/$1/d" ~/.ssh/known_hosts
-      fi
-      }
-
       # preview cmd library with "option" + "l"
       function cmdlib() {
         local selected_command

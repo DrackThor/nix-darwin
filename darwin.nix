@@ -83,6 +83,7 @@
       "daisydisk"
       "airbuddy"
       "calibre"
+      "basictex"
     ];
     masApps = {
       "Parallels Desktop" = 1085114709;
