@@ -70,7 +70,7 @@
     autocd = true;
     # if zsh startup time is slow, try this to debug
     # zprof.enable = true;
-    initExtra = ''
+    initContent = ''
       # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
 

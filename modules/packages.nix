@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    # ansible
     arc-browser
     bartender
     bat
@@ -9,6 +10,7 @@
     cnspec
     direnv
     discord
+    dive
     docker-client
     drawio
     eza
@@ -41,7 +43,7 @@
     terraform
     tilt
     tree
-    unifi
+    # unifi
     unixtools.watch
     wget
     yq-go
