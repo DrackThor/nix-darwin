@@ -19,6 +19,7 @@
     fzf-zsh
     git
     go
+    graphviz
     inetutils
     iterm2
     jq

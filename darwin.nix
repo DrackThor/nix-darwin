@@ -23,6 +23,7 @@
   ];
   networking.dns = [ "8.8.8.8" "1.1.1.1" ];
   users.users.drackthor.home = "/Users/drackthor";
+  system.primaryUser = "drackthor";
 
   # Auto upgrade nix package and the daemon service.
   # services.nix-daemon.enable = true; # outdated
