@@ -1,10 +1,9 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # ansible
     arc-browser
     bartender
     bat
-    boundary
+    # boundary
     bruno
     cnquery
     cnspec
@@ -39,7 +38,6 @@
     pre-commit
     pyenv
     python313
-    raycast
     spotify
     terraform
     tilt
