@@ -58,8 +58,10 @@
     # Cisco Anyconnect
     brews = [
         "snyk-cli"
-        "pandoc"
-        "ansible"
+        # "pandoc"
+        # "ansible"
+        # "azure-cli"
+        "python@3.12"
     ];
 
     casks = [
@@ -69,13 +71,14 @@
       # "rambox"
       # "steam"
       "airbuddy"
-      "basictex"
+      "arc"
+      # "basictex"
       "calibre"
       "citrix-workspace"
       "cleanshot"
       "daisydisk"
       "elgato-stream-deck"
-      "fixkey"
+      # "fixkey"
       "istat-menus"
       "microsoft-auto-update"
       "microsoft-office"
@@ -84,7 +87,7 @@
       "raycast"
       "screen-studio"
       "textsniper"
-      "vagrant"
+      # "vagrant"
       "vlc"
       "webex"
       "wifiman"

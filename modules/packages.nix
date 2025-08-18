@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    arc-browser
+    # arc-browser
     bartender
     bat
     # boundary
@@ -37,7 +37,6 @@
     openvpn
     pre-commit
     pyenv
-    python313
     spotify
     terraform
     tilt
