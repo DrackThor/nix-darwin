@@ -62,6 +62,9 @@
         # "ansible"
         # "azure-cli"
         "python@3.12"
+        "ffmpeg"
+        "uv"
+        "ruff"
     ];
 
     casks = [
@@ -118,7 +121,8 @@
       "/Applications/Arc.app"
       "/Applications/Obsidian.app"
       "/Users/drackthor/Applications/Home Manager Apps/Zotero.app"
-      "/Users/drackthor/Applications/PyCharm Professional Edition.app"
+      "/Users/drackthor/Applications/PyCharm.app"
+      # "/Users/drackthor/Applications/PyCharm Professional Edition.app"
       "/Applications/Google Chrome.app"
     ];
     dock.persistent-others = [

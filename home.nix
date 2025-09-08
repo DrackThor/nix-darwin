@@ -3,7 +3,7 @@
   fonts.fontconfig.enable = true;
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
     ./modules/nvim.nix
     ./modules/packages.nix
     ./home/files.nix
@@ -73,6 +73,10 @@
     initContent = ''
       # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
+
+      export PYENV_ROOT="$HOME/.pyenv"
+      [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+      eval "$(pyenv init - zsh)"
 
       # preview cmd library with "option" + "l"
       function cmdlib() {
