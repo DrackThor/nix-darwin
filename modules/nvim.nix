@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   programs.nixvim = {
     enable = true;
 
@@ -14,7 +15,11 @@
     performance = {
       combinePlugins = {
         enable = true;
-        standalonePlugins = [ "hmts.nvim" "neorg" "nvim-treesitter" ];
+        standalonePlugins = [
+          "hmts.nvim"
+          "neorg"
+          "nvim-treesitter"
+        ];
       };
       byteCompileLua.enable = true;
     };

@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, ... }: {
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
   home.stateVersion = "23.11";
   fonts.fontconfig.enable = true;
 
@@ -14,12 +20,19 @@
     enable = false;
     userName = "Daniel Drack";
     userEmail = "daniel.drack@fullstacks.eu";
-    ignores = [ "*~" ".DS_Store" ];
+    ignores = [
+      "*~"
+      ".DS_Store"
+    ];
     extraConfig = {
       core.editor = "nvim";
       github.user = "DrackThor";
-      init = { defaultBranch = "main"; };
-      diff = { external = "${pkgs.difftastic}/bin/difft"; };
+      init = {
+        defaultBranch = "main";
+      };
+      diff = {
+        external = "${pkgs.difftastic}/bin/difft";
+      };
     };
   };
 
@@ -58,7 +71,14 @@
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" "kubectl" "helm" "docker" "terraform" ];
+      plugins = [
+        "git"
+        "sudo"
+        "kubectl"
+        "helm"
+        "docker"
+        "terraform"
+      ];
     };
 
     sessionVariables = {
@@ -105,8 +125,7 @@
     enable = true;
     enableZshIntegration = true;
     fileWidgetCommand = "fd --type f . /Users/drackthor/code";
-    fileWidgetOptions =
-      [ "--preview 'bat --style=numbers --color=always --line-range :500 {}'" ];
+    fileWidgetOptions = [ "--preview 'bat --style=numbers --color=always --line-range :500 {}'" ];
     changeDirWidgetCommand = "fd --type d . /Users/drackthor/code";
     changeDirWidgetOptions = [ "--preview 'tree -C {} | head -200'" ];
   };

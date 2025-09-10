@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
 
   environment.variables = {
     EDITOR = "vim";
@@ -21,7 +22,10 @@
     "iPhone USB USB"
     "FullStackS Labor RRZ Graz"
   ];
-  networking.dns = [ "8.8.8.8" "1.1.1.1" ];
+  networking.dns = [
+    "8.8.8.8"
+    "1.1.1.1"
+  ];
   users.users.drackthor.home = "/Users/drackthor";
   system.primaryUser = "drackthor";
 
@@ -33,7 +37,9 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
-  programs.zsh = { enable = true; };
+  programs.zsh = {
+    enable = true;
+  };
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = null;
@@ -57,14 +63,14 @@
     onActivation.upgrade = true;
     # Cisco Anyconnect
     brews = [
-        "snyk-cli"
-        # "pandoc"
-        # "ansible"
-        # "azure-cli"
-        "python@3.12"
-        "ffmpeg"
-        "uv"
-        "ruff"
+      "snyk-cli"
+      # "pandoc"
+      # "ansible"
+      # "azure-cli"
+      "python@3.12"
+      "ffmpeg"
+      "uv"
+      "ruff"
     ];
 
     casks = [
@@ -105,8 +111,7 @@
 
   system.defaults = {
     dock.autohide = true;
-    dock.mru-spaces =
-      false; # i love this, macos will not rearrange the desktops
+    dock.mru-spaces = false; # i love this, macos will not rearrange the desktops
     dock.magnification = true;
     dock.persistent-apps = [
       "${pkgs.iterm2}/Applications/iTerm2.app"

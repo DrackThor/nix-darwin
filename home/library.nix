@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.file.".library" = {
     executable = false;
     # DrackThor's Command Library

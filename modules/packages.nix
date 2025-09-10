@@ -28,6 +28,7 @@
     mani
     mas
     nerd-fonts.meslo-lg
+    nixd
     nix-direnv
     nix-index
     nixfmt-rfc-style

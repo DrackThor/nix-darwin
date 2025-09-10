@@ -21,13 +21,23 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew
-    , homebrew-core, homebrew-cask, ... }:
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+      nix-homebrew,
+      homebrew-core,
+      homebrew-cask,
+      ...
+    }:
     let
       hostname = "drackbook";
       user = "drackthor";
       arch = "aarch64-darwin";
-    in {
+    in
+    {
       darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
         # inherir "inputs" from flake.lock to darwinConfiguration
         specialArgs = { inherit inputs; };

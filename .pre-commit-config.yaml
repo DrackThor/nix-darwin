@@ -41,9 +41,3 @@ repos:
           - '-ctitle-match-regex.regex=^(feat|fix|try|maintain)!?(\(.*\))?:.+|^Merge branch.*'
           - "-cauthor-valid-email.regex=[^@]+@fullstacks.eu"
           - --msg-filename
-
-# does not work yet..
-#  - repo: https://github.com/NixOS/nixfmt
-#    rev: master
-#    hooks:
-#      - id: nixfmt
