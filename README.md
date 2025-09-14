@@ -4,19 +4,39 @@ Effortlessly manage your macOS configuration with Nix Darwin.
 Follow the commands below to set up, update, or clean up your system.
 
 ---
+## Install nix and nix-darwin
+
+
+
+```shell
+# install nix from determinate systems
+https://docs.determinate.systems/
+
+# install nix darwin
+sudo mkdir -p /etc/nix-darwin
+sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
+cd /etc/nix-darwin
+
+nix flake init -t nix-darwin/nix-darwin-25.05
+
+sed -i '' "s/simple/$(scutil --get LocalHostName)/" flake.nix
+```
+
+---
 
 ## 🚀 Setup and Rebuild
 
 Use the following command to initiate your macOS configuration with the specified flake:
 
 ```bash
-nix run nix-darwin -- switch --flake ~/code/repos/drackthor/nix-darwin
+sudo nix run nix-darwin/nix-darwin-25.05#darwin-rebuild -- switch --flake ~/code/repos/drackthor/nix-darwin
+# nix run nix-darwin -- switch
 ```
 
 Afterwards, you can use this command for the same purpose:
 
 ```bash
-darwin-rebuild switch --flake ~/code/repos/drackthor/nix-darwin
+sudo darwin-rebuild switch --flake ~/code/repos/drackthor/nix-darwin
 ```
 
 ---

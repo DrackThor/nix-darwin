@@ -1,9 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # arc-browser
     bartender
     bat
-    # boundary
     bruno
     cnquery
     cnspec
@@ -38,11 +36,9 @@
     openvpn
     pre-commit
     pyenv
-    spotify
     terraform
     tilt
     tree
-    # unifi
     unixtools.watch
     wget
     yq-go

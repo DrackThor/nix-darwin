@@ -9,6 +9,9 @@
   # allow packages which are not open source
   nixpkgs.config.allowUnfree = true;
 
+  # use Determinate Systems nix
+  nix.enable = false;
+
   networking.computerName = "drackbook.local";
   networking.hostName = "drackbook";
   # networking.localHostName = "drackbook.local";
@@ -32,7 +35,6 @@
   # Auto upgrade nix package and the daemon service.
   # services.nix-daemon.enable = true; # outdated
   # nix.package = pkgs.nix;
-  nix.enable = true;
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
@@ -74,20 +76,13 @@
     ];
 
     casks = [
-      # "1password"
-      # "google-chrome"
-      # "jetbrains-toolbox"
-      # "rambox"
-      # "steam"
       "airbuddy"
       "arc"
-      # "basictex"
       "calibre"
       "citrix-workspace"
       "cleanshot"
       "daisydisk"
       "elgato-stream-deck"
-      # "fixkey"
       "istat-menus"
       "microsoft-auto-update"
       "microsoft-office"
@@ -95,11 +90,19 @@
       "obs"
       "raycast"
       "screen-studio"
+      "spotify"
       "textsniper"
-      # "vagrant"
       "vlc"
       "webex"
       "wifiman"
+      # "1password"
+      # "basictex"
+      # "fixkey"
+      # "google-chrome"
+      # "jetbrains-toolbox"
+      # "rambox"
+      # "steam"
+      # "vagrant"
     ];
     masApps = {
       # "Parallels Desktop" = 1085114709;
@@ -121,7 +124,7 @@
       "/Applications/Microsoft Teams.app"
       "/Applications/1Password.app"
       "/Applications/Bitwarden.app"
-      "/Applications/Spotify.app"
+      # "/Applications/Spotify.app"
       "/Applications/Rambox.app"
       "/Applications/Arc.app"
       "/Applications/Obsidian.app"
