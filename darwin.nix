@@ -119,19 +119,17 @@
     dock.persistent-apps = [
       "${pkgs.iterm2}/Applications/iTerm2.app"
       "/Applications/Microsoft Outlook.app"
-      # "/System/Applications/Calendar.app"
-      "/System/Applications/Mail.app"
       "/Applications/Microsoft Teams.app"
       "/Applications/1Password.app"
       "/Applications/Bitwarden.app"
-      # "/Applications/Spotify.app"
+      "/Applications/Spotify.app"
       "/Applications/Rambox.app"
       "/Applications/Arc.app"
       "/Applications/Obsidian.app"
       "/Users/drackthor/Applications/Home Manager Apps/Zotero.app"
       "/Users/drackthor/Applications/PyCharm.app"
-      # "/Users/drackthor/Applications/PyCharm Professional Edition.app"
       "/Applications/Google Chrome.app"
+      "/Applications/ChatGPT.app"
     ];
     dock.persistent-others = [
       # sadly need to use CustomUserPreferences at the moment because you can not configure fan etc. here
