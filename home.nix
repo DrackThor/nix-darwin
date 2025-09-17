@@ -108,8 +108,15 @@
             # zle accept-line # execute instantly
         fi
       }
+
+      # bind library search to ctrl-t
       zle -N cmdlib
-      bindkey '^[l' cmdlib
+      bindkey '^t' cmdlib
+
+      # update fzf keybindings
+      # bindkey '^H' fzf-history-widget
+      bindkey '^f' fzf-file-widget
+      bindkey '^e' fzf-cd-widget
     '';
     shellAliases = {
       ls = "eza --icons --classify --group-directories-first";

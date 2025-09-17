@@ -16,6 +16,7 @@
     fzf-zsh
     git
     go
+    gomplate
     graphviz
     inetutils
     iterm2
