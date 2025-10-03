@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    bartender
+    # bartender
     bat
     bruno
     cnquery

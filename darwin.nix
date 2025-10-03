@@ -78,6 +78,7 @@
     casks = [
       "airbuddy"
       "arc"
+      "bartender"
       "calibre"
       "citrix-workspace"
       "cleanshot"
