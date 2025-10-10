@@ -1,50 +1,15 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # bartender
-    bat
-    bruno
     cnquery
     cnspec
-    direnv
-    discord
-    dive
     docker-client
-    drawio
-    eza
-    fd
-    fzf
     fzf-zsh
-    git
-    go
-    gomplate
-    graphviz
-    inetutils
-    iterm2
-    jq
-    k9s
-    kubectl
-    kubernetes-helm
-    mani
-    mas
     nerd-fonts.meslo-lg
-    nixd
     nix-direnv
     nix-index
+    nixd
     nixfmt-rfc-style
-    nmap
-    obsidian
     oh-my-zsh
-    openvpn
-    pre-commit
-    pyenv
-    terraform
-    tilt
-    tree
-    unixtools.watch
-    wget
-    yq-go
-    zoom-us
-    zotero
     zsh-autosuggestions
     zsh-fzf-tab
     zsh-powerlevel10k
