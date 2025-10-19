@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
 
   environment.variables = {
@@ -69,6 +69,7 @@
       "bat"
       "direnv"
       "dive"
+      "docker-credential-helper"
       "eza"
       "fd"
       "ffmpeg"
@@ -105,6 +106,7 @@
     casks = [
       "airbuddy"
       "arc"
+      "balenaetcher"
       "bartender"
       "bruno"
       "calibre"
