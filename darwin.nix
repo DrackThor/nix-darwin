@@ -117,8 +117,9 @@
       "discord"
       "drawio"
       "elgato-stream-deck"
+      "ghostty"
       "istat-menus"
-      "iterm2"
+      # "iterm2"
       "mactex"
       "microsoft-auto-update"
       "microsoft-office"
@@ -158,7 +159,8 @@
     dock.mru-spaces = false; # i love this, macos will not rearrange the desktops
     dock.magnification = true;
     dock.persistent-apps = [
-      "${pkgs.iterm2}/Applications/iTerm2.app"
+      # "${pkgs.iterm2}/Applications/iTerm2.app"
+      "/Applications/Ghostty.app"
       "/Applications/Microsoft Outlook.app"
       "/Applications/Microsoft Teams.app"
       "/Applications/1Password.app"
