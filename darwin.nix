@@ -82,6 +82,7 @@
       "inetutils"
       "jq"
       "k9s"
+      "azure/kubelogin/kubelogin"
       "kubernetes-cli"
       "mani"
       "mas"
