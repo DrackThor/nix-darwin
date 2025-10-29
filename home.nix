@@ -11,8 +11,9 @@
     inputs.nixvim.homeModules.nixvim
     ./modules/nvim.nix
     ./modules/packages.nix
-    ./home/files.nix
+    ./home/kubeconfig.nix
     ./home/library.nix
+    ./home/ghostty.nix
   ];
 
   programs.git = {

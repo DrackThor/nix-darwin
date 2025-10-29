@@ -1,6 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  # Add this to create a Ghostty configuration file
   home.file.".kube/configs/refresh.sh" = {
     executable = true;
     text = ''
