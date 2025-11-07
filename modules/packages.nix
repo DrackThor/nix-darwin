@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     cnquery
     cnspec
+    difftastic
     fzf-zsh
     nerd-fonts.meslo-lg
     nix-direnv

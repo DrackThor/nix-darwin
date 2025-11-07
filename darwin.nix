@@ -39,10 +39,6 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
-  programs.zsh = {
-    enable = true;
-  };
-
   # Set Git commit hash for darwin-version.
   system.configurationRevision = null;
 
@@ -63,9 +59,10 @@
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
-    # Cisco Anyconnect
     brews = [
+      "ansible"
       "azure-cli"
+      "azure/kubelogin/kubelogin"
       "bat"
       "direnv"
       "dive"
@@ -82,12 +79,12 @@
       "inetutils"
       "jq"
       "k9s"
-      "azure/kubelogin/kubelogin"
       "kubernetes-cli"
       "mani"
       "mas"
       "nmap"
       "openvpn"
+      "pandoc"
       "podman"
       "pre-commit"
       "pyenv"
@@ -101,17 +98,17 @@
       "watch"
       "wget"
       "yq"
-      # "ansible"
-      # "pandoc"
     ];
 
     casks = [
+      "1password"
       "airbuddy"
-      "arc"
       "balenaetcher"
       "bartender"
+      "brave-browser"
       "bruno"
       "calibre"
+      "chatgpt"
       "citrix-workspace"
       "cleanshot"
       "daisydisk"
@@ -119,8 +116,9 @@
       "drawio"
       "elgato-stream-deck"
       "ghostty"
+      "google-chrome"
       "istat-menus"
-      # "iterm2"
+      "jetbrains-toolbox"
       "mactex"
       "microsoft-auto-update"
       "microsoft-office"
@@ -130,22 +128,16 @@
       "podman-desktop"
       "raycast"
       "screen-studio"
+      "slack"
       "spotify"
+      "steam"
       "textsniper"
       "vlc"
       "webex"
+      "whatsapp"
       "wifiman"
       "zoom"
       "zotero"
-      # "1password"
-      # "basictex"
-      # "docker-desktop"
-      # "fixkey"
-      # "google-chrome"
-      # "jetbrains-toolbox"
-      # "rambox"
-      # "steam"
-      # "vagrant"
     ];
     masApps = {
       # "Parallels Desktop" = 1085114709;
@@ -155,25 +147,25 @@
     };
   };
 
-  system.defaults = {
+ system.defaults = {
     dock.autohide = true;
     dock.mru-spaces = false; # i love this, macos will not rearrange the desktops
     dock.magnification = true;
     dock.persistent-apps = [
-      # "${pkgs.iterm2}/Applications/iTerm2.app"
       "/Applications/Ghostty.app"
       "/Applications/Microsoft Outlook.app"
       "/Applications/Microsoft Teams.app"
       "/Applications/1Password.app"
       "/Applications/Bitwarden.app"
       "/Applications/Spotify.app"
-      "/Applications/Rambox.app"
-      "/Applications/Arc.app"
+      "/Applications/Slack.app"
+      "/Applications/WhatsApp.app"
+      "/Applications/Brave Browser.app"
       "/Applications/Obsidian.app"
       "/Applications/Zotero.app"
       "/Users/drackthor/Applications/PyCharm.app"
       "/Applications/Google Chrome.app"
-      "/Applications/ChatGPT.app"
+      # "/Applications/ChatGPT.app"
     ];
     dock.persistent-others = [
       # sadly need to use CustomUserPreferences at the moment because you can not configure fan etc. here

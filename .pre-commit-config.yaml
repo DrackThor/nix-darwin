@@ -2,14 +2,14 @@
 repos:
   # overall file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v6.0.0
     hooks:
       - id: check-yaml
         args:
           - --allow-multiple-documents
       - id: end-of-file-fixer
       - id: trailing-whitespace
-      - id: check-byte-order-marker
+      - id: fix-byte-order-marker
       - id: check-executables-have-shebangs
       - id: check-json
       - id: check-merge-conflict
@@ -18,7 +18,6 @@ repos:
       - id: check-xml
       - id: debug-statements
       - id: destroyed-symlinks
-      - id: detect-aws-credentials
       - id: detect-private-key
         exclude: |
           (?x)(

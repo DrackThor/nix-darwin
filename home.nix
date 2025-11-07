@@ -14,27 +14,8 @@
     ./home/kubeconfig.nix
     ./home/library.nix
     ./home/ghostty.nix
+    ./home/git.nix
   ];
-
-  programs.git = {
-    enable = false;
-    userName = "Daniel Drack";
-    userEmail = "daniel.drack@fullstacks.eu";
-    ignores = [
-      "*~"
-      ".DS_Store"
-    ];
-    extraConfig = {
-      core.editor = "nvim";
-      github.user = "DrackThor";
-      init = {
-        defaultBranch = "main";
-      };
-      diff = {
-        external = "${pkgs.difftastic}/bin/difft";
-      };
-    };
-  };
 
   programs.zsh = {
     enable = true;
@@ -42,7 +23,7 @@
     autosuggestion.enable = true;
     history = {
       append = true;
-      share = false;
+      share = true;
       expireDuplicatesFirst = true;
       ignoreAllDups = true;
       ignoreSpace = true;
@@ -91,6 +72,9 @@
     # if zsh startup time is slow, try this to debug
     # zprof.enable = true;
     initContent = ''
+      # SSH Bitwarden Agent
+      export SSH_AUTH_SOCK=/Users/drackthor/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
+
       # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
 
