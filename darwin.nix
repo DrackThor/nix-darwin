@@ -4,6 +4,8 @@
   environment.variables = {
     EDITOR = "vim";
     LANG = "en_US.UTF-8";
+    # SSH Bitwarden Agent
+    SSH_AUTH_SOCK = "/Users/drackthor/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
   };
 
   # allow packages which are not open source
