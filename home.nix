@@ -67,14 +67,13 @@
       EDITOR = "nvim";
       # KUBECONFIG see home/files.nix
       KUBECONFIG = "/Users/drackthor/.kube/config-local";
+      # SSH Bitwarden Agent
+      SSH_AUTH_SOCK = "/Users/drackthor/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock";
     };
     autocd = true;
     # if zsh startup time is slow, try this to debug
     # zprof.enable = true;
     initContent = ''
-      # SSH Bitwarden Agent
-      export SSH_AUTH_SOCK=/Users/drackthor/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock
-
       # kubeconfig
       /Users/drackthor/.kube/configs/refresh.sh
 
