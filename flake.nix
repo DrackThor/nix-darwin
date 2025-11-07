@@ -41,6 +41,7 @@
         system = arch;
         modules = [
           ./darwin.nix
+          ./modules/brew.nix
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
