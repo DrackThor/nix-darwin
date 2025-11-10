@@ -65,6 +65,7 @@
       "google-chrome"
       "istat-menus"
       "jetbrains-toolbox"
+      "logi-options+"
       "mactex"
       "microsoft-auto-update"
       "microsoft-office"
