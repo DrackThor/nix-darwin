@@ -3,6 +3,7 @@
     cnquery
     cnspec
     difftastic
+    dua
     fzf-zsh
     nerd-fonts.meslo-lg
     nix-direnv

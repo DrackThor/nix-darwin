@@ -85,8 +85,66 @@
 
     };
 
-    loginwindow.LoginwindowText = "FullStackS Oida!";
+    # scroll in the direction you swipe/scroll
+    NSGlobalDomain."com.apple.swipescrolldirection" = false;
+
+    # When to show the scrollbars.
+    # Options are 'WhenScrolling', 'Automatic' and 'Always'.
+    NSGlobalDomain.AppleShowScrollBars = "WhenScrolling";
+
+    # right click on track-pad with two fingers
+    NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+
+    # tap to click
+    NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+
+    # use F1, F2,.. as function keys
+    NSGlobalDomain."com.apple.keyboard.fnState" = false;
+
+    # show hidden files in finder
+    # finder.AppleShowAllFiles = true;
+    NSGlobalDomain.AppleShowAllFiles = true;
+
+    # Change the default search scope. Use "SCcf" to default to current folder. The default is unset ("This Mac").
+    finder.FXDefaultSearchScope = "Sccf";
+
+    # Change the default finder view.
+    # "icnv" = Icon view, "Nlsv" = List view, "clmv" = Column View, "Flwv" = Gallery View
+    # The default is icnv.
+    finder.FXPreferredViewStyle = "Nlsv";
+
+    # Change the default folder shown in Finder windows.
+    # "Other" corresponds to the value of NewWindowTargetPath.
+    # The default is unset ("Recents").
+    finder.NewWindowTarget = "Other";
+
+    # Sets the URI to open when NewWindowTarget is "Other".
+    # Spaces and similar characters must be escaped.
+    # If the value is invalid, Finder will open your home directory.
+    finder.NewWindowTargetPath = "file:///Users/drackthor/Downloads";
+
+    # Show path breadcrumbs in finder windows.
+    # The default is false.
+    finder.ShowPathbar = true;
+
+    # Resize columns to fit filenames.
+    # The default is false.
+    # TODO: currently in dev
+    # finder._FXEnableColumnAutoSizing = true;
+
+    # Whether to show the full POSIX filepath in the window title.
+    # The default is false.
+    finder._FXShowPosixPathInTitle = true;
+
+    # Keep folders on top when sorting by name.
+    # The default is false.
+    finder._FXSortFoldersFirst = true;
+
+    # Allow users to login to the machine as guests using the Guest account.
+    # Default is true.
+    loginwindow.GuestEnabled = false;
+
+    loginwindow.LoginwindowText = "Gemma FULLSTACKS!";
     finder.AppleShowAllExtensions = true;
-    # finder.FXPreferredViewStyle = "clmv"; # does not work
   };
 }

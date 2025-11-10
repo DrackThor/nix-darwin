@@ -20,5 +20,4 @@
     ./home/direnv.nix
     ./home/zsh.nix
   ];
-
 }
