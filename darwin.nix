@@ -99,14 +99,17 @@
     NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
 
     # use F1, F2,.. as function keys
-    NSGlobalDomain."com.apple.keyboard.fnState" = false;
+    NSGlobalDomain."com.apple.keyboard.fnState" = true;
 
     # show hidden files in finder
-    # finder.AppleShowAllFiles = true;
     NSGlobalDomain.AppleShowAllFiles = true;
+    NSGlobalDomain.AppleShowAllExtensions = true;
+    finder.AppleShowAllFiles = true;
+    finder.AppleShowAllExtensions = true;
 
-    # Change the default search scope. Use "SCcf" to default to current folder. The default is unset ("This Mac").
-    finder.FXDefaultSearchScope = "Sccf";
+    # Change the default search scope. Use "SCcf" to default to current folder.
+    # The default is unset ("This Mac").
+    finder.FXDefaultSearchScope = "SCcf";
 
     # Change the default finder view.
     # "icnv" = Icon view, "Nlsv" = List view, "clmv" = Column View, "Flwv" = Gallery View
@@ -145,6 +148,5 @@
     loginwindow.GuestEnabled = false;
 
     loginwindow.LoginwindowText = "Gemma FULLSTACKS!";
-    finder.AppleShowAllExtensions = true;
   };
 }
